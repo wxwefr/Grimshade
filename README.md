@@ -16,10 +16,10 @@
 
 ## 🛠 Roadmap
 
-  Add World Map and Locations
-  Add quest & dialogue system
-  Add a save/load system
-  Design spell/magic subsystem
+ - Add World Map and Locations
+ - Add quest & dialogue system
+ - Add a save/load system
+ - Design spell/magic subsystem
 
 ---
    
