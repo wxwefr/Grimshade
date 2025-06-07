@@ -14,6 +14,7 @@ namespace Grimshade.Player
         public int playerMaxHp { get; set; }                          //Max HP
         public int PlayerXp { get; set; } = 0;
         public int PlayerXpMax { get; set; }
+        public int playerLevel { get; set; } = 0;
 
         //Public Weapon Shit
         public itemHandler currentWeapon { get; set; }
@@ -36,7 +37,7 @@ namespace Grimshade.Player
         public Player(string pName)
         {
             playerName = pName;
-            playerHealth = playerMaxHp;
+            playerHealth = 5;
             playerMaxHp = 5;
             Inventory = new InventorySystem();
         }
@@ -55,7 +56,11 @@ namespace Grimshade.Player
 
         private void LevelUp()
         {
-            throw new NotImplementedException();
+            BaseAttackPower += 2;
+            playerMaxHp += 5;
+            playerHealth = playerMaxHp;
+            playerLevel += 1;
+            Console.WriteLine($"You have leveled up to {playerLevel}");
         }
 
         public void Healable()
