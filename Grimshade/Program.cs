@@ -6,7 +6,7 @@ namespace Grimshade
     {
         static void Main(string[] args)
         {
-            var engine = new Engine();
+            var engine = new Game();
             engine.Start();
         }
     }

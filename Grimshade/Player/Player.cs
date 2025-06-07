@@ -63,5 +63,27 @@ namespace Grimshade.Player
             playerHealth = playerMaxHp;
             Console.WriteLine($"You have been healed to {playerHealth}/{playerMaxHp} HP.");
         }
+
+        public void playerStatus()
+        {
+            Console.WriteLine($"| ================ {playerName}'s Stats ================ |");
+
+            Console.WriteLine($" - XP: {PlayerXp}/{PlayerXpMax}");
+            Console.WriteLine($"\n");
+            Console.WriteLine($" - HP: {playerHealth}/{playerMaxHp}");
+            Console.WriteLine($" - AP: {AttackPower} (Base {BaseAttackPower} + Weapon {(currentWeapon?.i_AttackBonus ?? 0)})");
+
+            //If player has a weapon Equipped
+            if (currentWeapon != null)
+            {
+                Console.WriteLine($" - Equipped: {currentWeapon.i_Name}"); // Equipped weapons name i_Name short for item name.
+            }
+            else // If they dont
+            {
+                Console.WriteLine($" - Equipped: Fists");
+                Console.WriteLine($"\n");
+            }
+            Console.WriteLine($"| ====================================================== |");
+        }
     }
 }
