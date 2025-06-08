@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Grimshade.Player
 {
-    public class Player
+    public class PlayerHandler
     {
         //Public player details
         public string playerName { get; set; }                      //Players Name
@@ -34,7 +34,7 @@ namespace Grimshade.Player
         }
 
         //Setting Player details its public so the code can read and access it out side of the namespace/class
-        public Player(string pName)
+        public PlayerHandler(string pName)
         {
             playerName = pName;
             playerHealth = 5;
@@ -73,6 +73,7 @@ namespace Grimshade.Player
         {
             Console.WriteLine($"| ================ {playerName}'s Stats ================ |");
 
+            Console.WriteLine($" - LVL: {playerLevel}");
             Console.WriteLine($" - XP: {PlayerXp}/{PlayerXpMax}");
             Console.WriteLine($"\n");
             Console.WriteLine($" - HP: {playerHealth}/{playerMaxHp}");

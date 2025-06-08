@@ -17,7 +17,7 @@ namespace Grimshade.Player
             Console.WriteLine($" - {itemHandler.i_Name} added to your inventory. ");
         }
 
-        public bool ItemLists(Player player)
+        public bool ItemLists(PlayerHandler player)
         {
             if( _items.Count == 0 ) { return false; }
 

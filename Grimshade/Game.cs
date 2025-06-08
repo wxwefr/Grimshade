@@ -1,11 +1,12 @@
-﻿using Grimshade.Player;
+﻿using Grimshade.npcs;
+using Grimshade.Player;
 using System;
 
 namespace Grimshade
 {
     public class Game
     {
-        private Player.Player _player;
+        private Player.PlayerHandler _player;
 
         public void Start()
         {
@@ -13,7 +14,7 @@ namespace Grimshade
             Console.Write("Enter your character's name: ");
 
             string playerName = Console.ReadLine();
-            _player = new Player.Player(playerName);
+            _player = new Player.PlayerHandler(playerName);
 
             MainLoop();
 
@@ -48,6 +49,7 @@ namespace Grimshade
                         break;
 
                     case "3":
+                        //todo - Add explore();
                         break;
 
                     default:
@@ -107,6 +109,13 @@ namespace Grimshade
             {
                 Console.Clear();
             }
+        }
+
+        public void Explore()
+        {
+            Console.WriteLine("Where would you like to explore ");
+
+
         }
     }
 }
